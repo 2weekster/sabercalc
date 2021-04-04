@@ -1,0 +1,93 @@
+#include <conio.h>
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159265
+
+int main()
+{
+    char op;
+    float x1,x2,y;
+    float val = PI / 180;
+    printf("Welcome to my lousy calculator! \n");
+    printf("choose and type any of the following commands to get started \n");
+    printf("+,-,*,/,s for sine,c for cosine,t for tangent,2 for squaring,r for square root,p for power \n");
+    scanf("%c",&op);
+    
+    switch(op)
+    {
+        case '+':
+        printf("type 2 variables \n");
+        scanf("%f %f",&x1,&x2);
+        y=x1+x2;
+        printf("%f + %f = %f",x1,x2,y);
+        break;
+        
+        case '-':
+        printf("type 2 variables \n");
+        scanf("%f %f",&x1,&x2);
+        y=x1-x2;
+        printf("%f - %f = %f",x1,x2,y);
+        break;
+        
+        case '*':
+        printf("type 2 variables \n");
+        scanf("%f %f",&x1,&x2);
+        y=x1*x2;
+        printf("%f * %f = %f",x1,x2,y);
+        break;
+        
+        case '/':
+        printf("type 2 variables \n");
+        scanf("%f %f",&x1,&x2);
+        y=x1/x2;
+        printf("%f / %f = %f",x1,x2,y);
+        break;
+        
+        case 's':
+        printf("Enter 1 degrees variable \n");
+        scanf("%f",&x1);
+        y=sin(x1*val);
+        printf("The sine of %f degrees is %f",x1,y);
+        break;
+        
+        case 'c':
+        printf("Enter 1 degrees variable \n");
+        scanf("%f",&x1);
+        y=cos(x1*val);
+        printf("The cosine of %f degrees is %f",x1,y);
+        break;
+        
+        case 't':
+        printf("Enter 1 degrees variable \n");
+        scanf("%f",&x1);
+        y=tan(x1*val);
+        printf("The tangent of %f degrees is %f",x1,y);
+        break;
+        
+        case '2':
+        printf("Enter 1 variable \n");
+        scanf("%f",&x1);
+        y=x1*x1;
+        printf("%f squared is %f",x1,y);
+        break;
+        
+        case 'r':
+        printf("Enter 1 variable \n");
+        scanf("%f",&x1);
+        y=sqrt(x1);
+        printf("Square root of %f is %f",x1,y);
+        break;
+        
+        case 'p':
+        printf("Enter 2 variables. First variable will be raised to the power of the second.  \n");
+        scanf("%f %f",&x1,&x2);
+        y=pow(x1,x2);
+        printf("%f to the power of %f is %f",x1,x2,y);
+        break;
+        
+        default:
+        printf("Error 404! The operator you're looking for doesn't exist");
+    }
+    return 0;
+}
